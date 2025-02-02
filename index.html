@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cava Browser</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+        	#title{
+                display: block;
+                width: 80vw;
+                margin: auto;
+                margin-top: 150px;
+            }
+            .search{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #search-input, #search-btn{
+                padding: 3vw;
+                border: none;
+                outline: none;
+            }
+            .search #search-input{
+                width: 80vw;
+                max-width: 50vw;
+                background-image: linear-gradient(to right, #EAE5C9, #6CC6CB);
+                opacity: 0.5;
+                border-radius: 10px 0 0 10px;
+            }
+            .search #search-btn{
+                background-color: #6CC6CB;
+                opacity: 0.5;
+                border-radius: 0 10px 10px 0;
+            }
+            
+            .favorites{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .favorites button{
+                margin: 5vw 0.3vw;
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+            .favorites img{
+                width: 10vw;
+                border-radius: 5px;
+            }
+            @font-face {
+               font-family: 'Chinese';
+               src: url('fonts/Chinese.ttf') format('truetype');
+            }
+        </style>
+	</head>
+	<body>
+		<img src="images/cava" id="title" onclick="cleanMode()"/>
+        <div class="search">
+            <input type="text" id="search-input" placeholder="请输入网址或搜索关键词"/>
+            <button id="search-btn" onclick="search()">Search</button>
+        </div>
+        <div class="favorites">
+            <button onclick="to('bootcss')"><img src="https://icons.bootcss.com/favicon.ico"/></button>
+            <button onclick="to('16map')"><img src="https://www.16map.com/favicon.ico"/></button>
+            <button onclick="to('pinduoduo')"><img src="images/Alternate icon/pinduoduo.jpg"/></button>
+        	<button onclick="to('taobao')"><img src="https://www.taobao.com/favicon.ico"/></button>
+        	<button onclick="tofull('developer.mozilla.org/zh-CN/docs')"><img src="https://developer.mozilla.org/favicon.ico"/></button>
+            <button onclick="to('4399')"><img src="https://www.4399.com/favicon.ico"/></button>
+            <button onclick="to('xiaohongshu')"><img src="https://www.xiaohongshu.com/favicon.ico"/></button>
+        </div>
+	</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="index.js" type="text/javascript" charset="utf-8"></script>
+</html>
